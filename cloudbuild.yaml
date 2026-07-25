@@ -7,13 +7,13 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0'
+      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v2.0'
       - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0'
+      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v2.0'
 
   - name: 'gcr.io/cloud-builders/kubectl'
     id: 'Deploy'
